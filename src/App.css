@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
+body {
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.outerContainer {
+  height: 100vh;
+  background-color: #c5e4e7;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.innerContainer {
+  display: grid;
+  height: 60vh;
+  width: 60%;
+  background-color: #ffffff;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80%;
+  border-radius: 30px;
+  /* align-items: center; */
+  /* grid-template-rows: 1fr; */
+  align-content: center;
+  padding-left: 4%;
+  padding-right: 4%;
+  /* justify-content: space-between; */
+}
+.leftContainer {
+  display: grid;
+  /* background-color: orange; */
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 50px 50px 50px 80px 80px 50px 50px; */
+  grid-template-rows: 1fr 0.7fr 1fr 1fr 1fr 1fr 0.7fr;
+  grid-template-areas:
+    "bill bill bill"
+    "dollar dollar dollar"
+    "tip tip tip"
+    "one two three"
+    "four five six"
+    "people people people"
+    "rupee rupee rupee";
+  border-radius: 30px;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+.rightContainer {
+  display: grid;
+  border-radius: 30px;
+  background-color: #00474b;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: 150px 150px 150px; */
+  grid-template-rows: 1fr 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  place-items: center;
+}
+.right-bttn {
+  height: 30%;
+  width: 40%;
+  /* margin-bottom: -40px; */
+  grid-column: 1/3;
+  border-radius: 5px;
+  background-color: #27c2ad;
 }
 
-.App-link {
-  color: #61dafb;
+.inn1 {
+  background-color: blue;
+}
+.inn2 {
+  background-color: orange;
+}
+.bill {
+  /* grid-area: center; */
+
+  grid-area: bill;
+  color: #416e71;
+}
+.dollar {
+  border: none;
+  font-size: 20px;
+  background-color: #f3f8fb;
+  outline-width: 0;
+  border-radius: 5px;
+  grid-area: dollar;
+}
+.tip {
+  color: #416e71;
+  grid-area: tip;
+}
+.bttn1 {
+  grid-area: one;
+  justify-self: center;
+  width: 80%;
+  margin: 10px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #27c2ad;
+  box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc;
+}
+.bttn2 {
+  grid-area: two;
+  justify-self: center;
+  width: 80%;
+  margin: 10px;
+  outline: none;
+  border: none;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background-color: #27c2ad;
+  box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc;
+}
+.bttn3 {
+  grid-area: three;
+  justify-self: center;
+  width: 80%;
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #27c2ad;
+  box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc;
+}
+.bttn4 {
+  grid-area: four;
+  justify-self: center;
+  width: 80%;
+  margin: 10px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border-radius: 5px; */
+  background-color: #27c2ad;
+  box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.bttn5 {
+  grid-area: five;
+  justify-self: center;
+  width: 80%;
+  margin: 10px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border-radius: 5px; */
+  background-color: #27c2ad;
+  box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.bttn6 {
+  grid-area: six;
+  justify-self: center;
+  width: 80%;
+  margin: 10px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border-radius: 5px; */
+  background-color: #27c2ad;
+  box-shadow: -3px -3px 7px, 3px 3px 7px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.people {
+  grid-area: people;
+  align-self: end;
+  color: #416e71;
+}
+.rupee {
+  border: none;
+  text-align: right;
+  font-size: 25px;
+  background-color: #f3f8fb;
+  outline-width: 0;
+  border-radius: 5px;
+  padding: 10px;
+  padding-right: 20px;
+  color: #00474b;
+  font-weight: bold;
+  font-smooth: auto;
+
+  grid-area: rupee;
+}
+.btn-wide {
+  /* width: 300px; */
+  /* height: 60px; */
+  height: 30%;
+  width: 40%;
+  /* margin-bottom: -40px; */
+  grid-column: 1/3;
+  margin: 10px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  background-color: #27c2ad;
+  /* box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc; */
+}
+.btn-normal:active {
+  box-shadow: -4px -3px 7px inset, 3px 3px 7px #bbc2cc inset;
+  font-size: 16px;
+  user-select: none;
+}
+.btn-normal {
+  box-shadow: -3px -3px 7px, 3px 3px 7px #bbc3cc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.icon {
+  margin-top: -17%;
+  margin-left: -98%;
+  margin-right: 24%;
+  margin-bottom: 10%;
+  size: 30px;
+  height: 30px;
+  width: 50px;
+  /* min-width: 40px; */
+}
+@media screen and (max-width: 900px) {
+  .innerContainer {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
